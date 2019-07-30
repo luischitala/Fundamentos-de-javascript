@@ -30,3 +30,13 @@ presentarse(sacha)
 presentarse(dario)
 imprimirNombreEnMayusculas(sacha)
 imprimirNombreEnMayusculas(dario)
+
+function cumpleanos(persona){
+return{
+	...persona,
+	edad: persona.edad + 1
+	}
+}
+
+
+
