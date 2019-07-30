@@ -10,12 +10,23 @@ var dario = {
 	edad: 27 
 }
 
-function imprimirNombreEnMayusculas({nombre,apellido})
+function imprimirNombreEnMayusculas(persona)
 {
-
-	console.log(nombre.toUpperCase() + " "+ apellido.toUpperCase())
+	var { nombre } = persona
+	console.log(nombre.toUpperCase() )
 	
 }
 
+function presentarse(persona)
+{
+	var {nombre} = persona
+	var {apellido} = persona
+	var {edad} = persona
+
+	console.log("Hola soy " + nombre.toUpperCase() + " " + apellido.toUpperCase() + ", y tengo " + parseInt(edad) + " Anos")
+}
+
+presentarse(sacha)
+presentarse(dario)
 imprimirNombreEnMayusculas(sacha)
 imprimirNombreEnMayusculas(dario)
