@@ -2,7 +2,7 @@ var luis =
 {
 	nombre: "Luis",
 	apellido: "Chitala",
-	edad: 23,
+	edad: 17,
 	ingeniero: true,
 	cocinero: true,
 	cantante: false,
@@ -36,16 +36,18 @@ function imprProfesiones(persona)
 	}
 }
 
-const MAYORIA_DE_EDAD =18
+const MAYORIA_DE_EDAD = 18
+const MENOR_DE_EDAD  = 17
 
-function esMayorDeEedad(persona)
-{
-	return persona.edad >= MAYORIA_DE_EDAD
-}
-
+//const esMayorDeEdad = function(persona)
+//{
+	//return persona.edad >= MAYORIA_DE_EDAD
+//}
+//const esMayorDeEedad = persona => persona.edad >= MAYORIA_DE_EDAD
+const esMayorDeEdad = ({edad}) => edad >= MAYORIA_DE_EDAD
 function imprimirSiEsMayorDeEdad(persona)
 {
-	if(esMayorDeEedad(persona))
+	if(esMayorDeEdad(persona))
 	{
 		console.log(`${persona.nombre} es mayor de edad`)
 	}
@@ -54,5 +56,20 @@ function imprimirSiEsMayorDeEdad(persona)
 		console.log(`${persona.nombre} es menor de edad`)
 	}
 }
+//const esMenorDeEdad = ({edad}) => edad <= MENOR_DE_EDAD
+//function imprimirSiEsMenorDeEdad(persona)
+//{
+//	if(esMenorDeEdad(persona))
+//	{
+//		console.log(`${persona.nombre} es menor de edad`)
+//	}
+//}
+
+function permitirAcceso(persona)
+{
+	if(!esMayorDeEdad(persona))
+		console.log("Acceso Denegado")
+}
 
 imprimirSiEsMayorDeEdad(luis)
+permitirAcceso(luis)
