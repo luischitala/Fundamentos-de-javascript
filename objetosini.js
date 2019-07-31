@@ -14,6 +14,8 @@ Persona.prototype.soyAlto = function ()
 {
 	return this.estatura > 1.80
 }
+
+
 var luis = new Persona("Luis", "Chitala", 1.65)
 var erika = new Persona("Erika", "Roman", 1.88)
 var arturo = new Persona("Arturo", "Gomez", 1.99)
