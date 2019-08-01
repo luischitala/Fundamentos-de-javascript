@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Var,let y const
+	</title>
+</head>
+<body>
+	<script>
+		var luis = {
+			nombre: "Luis",
+			apellido: "Chitala",
+			edad: 24
+		}
+
+		function esMayorDeEdad(persona){
+			let monsaje
+			const MAYORIA_DE_EDAD = 18
+			if (persona.edad > 18){
+				mensaje = "Es mayor de edad"
+			}else {
+				mensaje = "Es menor de edad"
+				
+			}
+			console.log(mensaje)
+			
+		}
+		//esMayorDeEdad(luis)
+		for (let i = 0; i < 10; i++){
+			console.log(i)
+		}
+		console.log(`Termino el for, el valor de ei es ${i}`)
+</script>
+</body>
+</html>
