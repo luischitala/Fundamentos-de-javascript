@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Closures</title>
+</head>
+<body>
+<script >
+		function crearSaludo(finalDeFrase){
+			return function(nombre){
+				console.log(`Hola ${nombre} ${finalDeFrase}`)
+			}
+		}
+		const saludoArgentino = crearSaludo("Che")
+		const saludoMexicano = crearSaludo("We")
+		const saludoColombiano = crearSaludo("Parce")
+
+		saludoArgentino("Luis")
+</script>
+</body>
+</html>
