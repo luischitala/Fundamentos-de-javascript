@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contexto de una funcion
+	</title>
+</head>
+<body>
+<script>
+	const luis = {
+		nombre: "Luis",
+		apellido: "Chitala"
+	}
+	const yesika = {
+		nombre: "Yesika",
+		apellido: "Montes"
+	}
+	function saludar(saludo = "Hola"){
+		console.log(`${saludo}, mi nombre es ${this.nombre}`)
+	}
+	// const saludarALuis = saludar.bind(luis)
+	// const saludarAYesika = saludar.bind(yesika)
+
+//	setTimeout(saludar.bind(luis, "Hola che"),1000)
+//saludar.call(luis,"Hola che")
+	saludar.apply(luis,["Hola che"])
+</script>
+</body>
+</html>
